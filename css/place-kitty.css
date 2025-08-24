@@ -1,39 +1,39 @@
 /* Select the image with a class of kitty-1 */
-write-your-selector-here {
-  position: absolute;
-  z-index: 1;
-  top: 276px;
-  left: 129px;
+.kitty-1 {
+  position: absolute;   /* Take the image out of normal flow and place it on exact coordinates */
+  z-index: 1;           /* Stack order → 1 means it’s behind others with higher z-index */
+  top: 276px;           /* Push the image 276px down from the top of its parent (.wrapper) */
+  left: 129px;          /* Push the image 129px from the left side of its parent */
 }
 
 /* Select the image with id of kitty-2 */
-write-your-selector-here {
-  position: absolute;
-  z-index: 2;
-  top: 212px;
-  left: 369px;
+#kitty-2 {
+  position: absolute;   /* Same absolute positioning */
+  z-index: 2;           /* Higher layer than kitty-1 */
+  top: 212px;           /* Positioned slightly higher */
+  left: 369px;          /* Positioned further to the right */
 }
 
-/* Select the image inside the element with an id of basket (using its descendent relationship) */
-write-your-selector-here {
-  position: absolute;
-  z-index: 5;
-  top: 291px;
-  left: 319px;
+/* Select the image inside the element with an id of basket */
+#basket img {
+  position: absolute;   /* Position this kitten relative to the wrapper */
+  z-index: 5;           /* Very high layer → kitten appears “inside” the basket */
+  top: 291px;           /* Moves it down */
+  left: 319px;          /* Moves it right */
 }
 
-/* Select the image based on it being a sibling that follows immediately after the element with an id of ball (using adjacent sibling selector) */
-write-your-selector-here {
-  position: absolute;
-  z-index: 4;
-  top: 260px;
-  left: 455px;
+/* Select the image that follows immediately after the element with an id of ball */
+#ball + img {
+  position: absolute;   /* Absolute positioning */
+  z-index: 4;           /* Stack level → above kitty-2 but below the basket kitten */
+  top: 260px;           /* Adjusts vertical position */
+  left: 455px;          /* Adjusts horizontal position */
 }
 
-/* Select the image that has an alt attribute value matching "Kitty 5" (using attribute selector) */
-write-your-selector-here {
-  position: absolute;
-  z-index: 3;
-  top: 217px;
-  left: 223px;
+/* Select the image that has an alt attribute value matching "Kitty 5" */
+img[alt="Kitty 5"] {
+  position: absolute;   /* Position this specific kitten */
+  z-index: 3;           /* Sits between kitty-2 and kitty-4 */
+  top: 217px;           /* Vertical offset */
+  left: 223px;          /* Horizontal offset */
 }
